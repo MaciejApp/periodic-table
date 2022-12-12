@@ -1,0 +1,165 @@
+/* /* setting up colours as var for future change */
+:root {
+    --alkali_metal: lightcoral;
+    --alkaline_earth: violet;
+    --tranisition_metal: aqua;
+    --basic_metal: lightblue;
+    --semimetal: aquamarine;
+    --nonmetal: bisque;
+    --halogen: coral;
+    --noble_gas: orangered;
+    --lanthanide: pink;
+    --actinide: hotpink;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+img {
+    max-width: 100%;
+}
+body {
+    box-sizing: border-box;
+    font-size: 16px;
+    max-width: 1800px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FAF9F6;
+}
+main {
+    padding: 1rem 1rem;
+}
+p {
+    font-size: 0.8rem;
+    text-align: start;
+}
+h1 {
+    text-align: center;
+    font-size: clamp(2rem, 3rem, 4rem);
+}
+h2 {
+    font-size: clamp(1rem, 2.5vw, 3rem);
+}
+
+h3 {
+    font-size: clamp(1rem, 1vw, 1.5rem);
+    font-weight: 400;
+    line-height: 1;
+}
+.table {
+    display: grid;
+    gap: 0.25rem;
+    grid-template-columns: repeat(18, 1fr);
+}
+.element {
+    outline: 1px solid grey;
+    overflow-wrap: break-word;
+    hyphens: manual;
+    text-align: center;
+    padding: 0 0.1rem;
+    box-shadow: 1px 1px 2px 0px grey;
+}
+.element:hover {
+    outline: 2px solid black;
+    box-shadow: 4px 4px 4px 1px grey;
+}
+.element-2 {
+    grid-column-start: 18;
+}
+.element-5, .element-13 {
+    grid-column-start: 13;
+}
+.element-72, .element-104 {
+    grid-column-start: 4;
+}
+.additional {
+    margin: 2rem 0 0 0;
+    display: grid;
+    gap: 0.25rem;
+    grid-template-columns: repeat(18, 1fr);
+}
+.element-57, .element-89 {
+    grid-column-start: 4;   
+}
+
+.asterisk1, .asterisk2 {
+    outline: 0;
+    align-self: center;
+    box-shadow: none;
+}
+.asterisk1-add, .asterisk2-add {
+    outline: 0;
+    align-self: center;
+    grid-column-start: 3;
+    box-shadow: none;
+}
+.asterisk1:hover, .asterisk2:hover, .asterisk1-add:hover, .asterisk2-add:hover {
+    outline: 0;
+    box-shadow: none;
+}
+
+/* setting colors */
+.alkali_metal {
+    background-color: var(--alkali_metal);
+}
+.alkaline_earth {
+    background-color: var(--alkaline_earth);
+}
+.transition_metal {
+    background-color: var(--tranisition_metal);
+}
+.basic_metal { 
+    background-color: var(--basic_metal);
+}
+.semimetal {
+    background-color: var(--semimetal);
+}
+.nonmetal {
+    background-color: var(--nonmetal);
+}
+.halogen {
+    background-color: var(--halogen);
+}
+.noble_gas {
+    background-color: var(--noble_gas);
+}
+.lanthanide {
+    background-color: var(--lanthanide);
+}
+.actinide {
+    background-color: var(--actinide);
+}
+.mobile_only {
+    display: none;
+}
+/* on MEDIUM breakpoint: remove h3 and decrease size of fonts */
+@media screen and (min-width: 401px) and (max-width: 800px){
+
+    h3 {
+        display: none;
+    }
+    p {
+        font-size: 0.5rem;
+    }
+    h2 {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+}
+/* on SMALL breakpoint: display image, change table layout to flex, remove not needed classes from display  */
+@media screen and (max-width: 400px){
+    .mobile_only {
+        display: block;
+    }
+    /* I AM REMOVING TABLE AS IT WAS COMMENTED BY REVIEWER THAT I SHOULD CHANGE IT TO DISPLAY NONE. ORIGINAL TABLE HAS BEEN REPLACED WITH IMAGE BUT THIS ADDITIONAL LAYOUT WAS CONFUSING FOR REVIEWER */
+    .table {
+        display: flex;
+        flex-direction: column;
+    }
+    .additional {
+        display: none;
+    }
+    .asterisk1, .asterisk2, .asterisk1-add, .asterisk2-add  {
+        display: none;
+    }  
+}
+
