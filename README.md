@@ -6,7 +6,7 @@ The task was to create a Periodic Table in a responsive manner - using HTML & CS
 
 ## Demo
 
-Link TBC
+[Periodic-Table] (https://maciejapp.github.io/periodic-table/)
 
 ## Contact Details
 
